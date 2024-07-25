@@ -1,4 +1,4 @@
-window.addEventListener(`contextmenu`, (e) => {
+window.addEventListener('contextmenu', (e) => {
   e.preventDefault();
 });
 
@@ -12,6 +12,11 @@ document.getElementById("calculate-age").addEventListener("click", function () {
   } else {
     displayAge("Please enter both dates.");
   }
+});
+
+document.getElementById("todays-date-button").addEventListener("click", function () {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById("age-at-date").value = today;
 });
 
 function calculateAge(birthdate, targetDate) {
