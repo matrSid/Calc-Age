@@ -1,5 +1,5 @@
 window.addEventListener(`contextmenu`, (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
   });
   
   document.getElementById("calculate-age").addEventListener("click", function () {
@@ -37,14 +37,14 @@ window.addEventListener(`contextmenu`, (e) => {
     if (age.years >= 0) {
       ageResultElement.innerText = `You are ${age.years} years ${age.months} months and ${age.days} days old.`;
     } else {
-      ageResultElement.innerText = "Please enter a valid date.";
+      ageResultElement.innerText = "Invalid Date, please enter a valid date.";
     }
   
     // GSAP animation
     gsap.fromTo(
       ageResultElement,
-      { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 1 }
+      { opacity: 0, y: -20 }, 
+      { opacity: 1, y: 0, duration: 1 } 
     );
   }
   
